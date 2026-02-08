@@ -3,6 +3,20 @@ import { Montserrat, Roboto_Slab } from "next/font/google";
 import "./globals.css";
 import WhatsAppButton from "./components/WhatsAppButton";
 import GoogleAdsTracking from "./components/GoogleAdsTracking";
+import { Cormorant_Garamond, Raleway } from 'next/font/google';
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-cormorant',
+});
+
+const raleway = Raleway({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  variable: '--font-raleway',
+});
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -38,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="scroll-smooth">
+    <html lang="es" className={`${cormorant.variable} ${raleway.variable} scroll-smooth`}>
       <head>
         {/* Google Ads Tracking */}
         <GoogleAdsTracking />
