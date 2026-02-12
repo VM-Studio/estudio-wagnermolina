@@ -9,6 +9,7 @@ import Sobre from './components/next-web/Sobre';
 import Caracteriza from './components/next-web/Caracteriza';
 import Formacion from './components/next-web/Formacion';
 import Prensa from './components/next-web/Prensa';
+import CNNVideo from './components/next-web/CNNVideo';
 import Videos from './components/next-web/Videos';
 import Resenias from './components/next-web/Reseñas';
 import Instagram from './components/next-web/Instagram';
@@ -75,8 +76,9 @@ export default function FiliyAsociadosPage() {
       />
       <Navbar />
       <main>
-        <Hero />
-        <Especialidades />
+  <Hero />
+  <CNNVideo />
+  <Especialidades />
         <Sobre />
         <Caracteriza />
         <Formacion />

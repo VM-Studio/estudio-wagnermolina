@@ -19,7 +19,7 @@ export default function WhatsAppButton({ message = "Hola,%20quiero%20consultar%2
       target="_blank"
       rel="noopener noreferrer"
       onClick={handleClick}
-      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 transition-all duration-300 hover:scale-110 group"
+      className="whatsapp-btn group"
       aria-label="Contactar por WhatsApp"
     >
       {/* Ícono sin fondo - más grande */}

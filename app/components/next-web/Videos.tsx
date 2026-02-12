@@ -1,14 +1,16 @@
 export default function Videos() {
-  const videos = [
-    'https://www.youtube.com/embed/7BtjYsn4H7o',
-    'https://www.youtube.com/embed/8rVW1J3PElw',
-    'https://www.youtube.com/embed/vLVULUCfxGM',
-    'https://www.youtube.com/embed/OgU8gpqzgZI',
-    'https://www.youtube.com/embed/3WXi_oHuMk0',
-    'https://www.youtube.com/embed/o4gjU5YBXRM',
-    'https://www.youtube.com/embed/EQxx-c-JGuI',
-    'https://www.youtube.com/embed/OfmY40RB-e8'
+  // IDs de los 7 videos proporcionados
+  const videoIds = [
+    'A0TPJzfjR7I',
+    'U_OiimeNq5Q',
+    'Rwsf977o62E',
+    'yGIbuNx_4i8',
+    '6FN6gh11jkM',
+    'g0rBlX_YLhA',
+    'RupkaT6LjUs',
   ];
+
+  const videos = videoIds.map((id) => `https://www.youtube.com/embed/${id}`);
 
   return (
     <section className="videos" id="videos">
@@ -26,6 +28,7 @@ export default function Videos() {
                 title={`Video ${index + 1}`}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                loading="lazy"
               />
             </div>
           ))}
