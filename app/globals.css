@@ -338,6 +338,9 @@ a, button, input, textarea, select { transition: all 0.2s cubic-bezier(0.4, 0, 0
   .formacion-item::before { left: -1rem; }
   .footer-grid { text-align: center; gap: 2.5rem; }
   .footer-logo { align-items: center; display: flex; flex-direction: column; }
+
+  /* Ocultar el logo del navbar en dispositivos móviles para evitar duplicación con el hero */
+  .nav-logo { display: none !important; }
 }
 
 @media (max-width: 480px) {
