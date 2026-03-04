@@ -4,10 +4,10 @@ interface WhatsAppButtonProps {
   message?: string;
 }
 
-export default function WhatsAppButton({ message = "Hola,%20quiero%20consultar%20sobre%20sucesiones" }: WhatsAppButtonProps) {
+export default function WhatsAppButton({ message = "Hola,%20quiero%20consultar%20sobre%20sus%20servicios" }: WhatsAppButtonProps) {
   return (
     <a
-      href={`https://wa.me/5493515186325?text=${message}`}
+      href={`https://wa.me/541143728257?text=${message}`}
       target="_blank"
       rel="noopener noreferrer"
       className="whatsapp-btn group"

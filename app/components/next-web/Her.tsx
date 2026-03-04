@@ -14,7 +14,7 @@ export default function Hero() {
           La tranquilidad de estar <span className="highlight">bien asesorado</span>
         </p>
         <a 
-          href="https://wa.me/5493515186325" 
+          href="https://wa.me/541143728257" 
           target="_blank" 
           rel="noopener noreferrer"
           className="btn-hero"
