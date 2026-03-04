@@ -56,21 +56,16 @@ export default function Prensa() {
                   <div className="prensa-card-inner">
                     <div className="prensa-card-source">{noticia.source}</div>
                     <h3>{noticia.title}</h3>
-                    <a 
-                      href={noticia.link} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="prensa-card-link"
-                    >
+                    <span className="prensa-card-link" style={{ cursor: 'default' }}>
                       Leer artículo <ArrowRight size={12} />
-                    </a>
+                    </span>
                   </div>
                 </div>
               ))}
             </div>
           </div>
           <div className="prensa-controls">
-            <button className="prensa-btn" onClick={() => moveCarousel(-1)}>
+            <button className="prensa-btn" style={{ cursor: 'default', pointerEvents: 'none' }}>
               <ChevronLeft size={14} />
             </button>
             <div className="prensa-dots">
@@ -78,11 +73,11 @@ export default function Prensa() {
                 <div 
                   key={index} 
                   className={`prensa-dot ${currentIndex === index ? 'active' : ''}`}
-                  onClick={() => setCurrentIndex(index)}
+                  style={{ cursor: 'default', pointerEvents: 'none' }}
                 />
               ))}
             </div>
-            <button className="prensa-btn" onClick={() => moveCarousel(1)}>
+            <button className="prensa-btn" style={{ cursor: 'default', pointerEvents: 'none' }}>
               <ChevronRight size={14} />
             </button>
           </div>

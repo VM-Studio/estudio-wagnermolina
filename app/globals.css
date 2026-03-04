@@ -136,9 +136,23 @@ a, button, input, textarea, select { transition: all 0.2s cubic-bezier(0.4, 0, 0
 .caracteriza-item h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 500; margin-bottom: 0.8rem; color: var(--black); }
 .caracteriza-item p { font-size: 0.95rem; line-height: 1.8; color: var(--gray); font-weight: 400; }
 
-/* Asociados Grid */
+/* Asociados Grid - Desktop */
 .asociados-grid { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; }
 .asociado-card { display: flex; flex-direction: column; align-items: center; flex: 1 1 220px; max-width: 260px; text-align: center; }
+
+/* Asociados Carousel - Mobile (oculto en desktop) */
+.asociados-carousel-mobile { display: none; }
+.asociados-carousel-wrap { overflow: hidden; position: relative; }
+.asociados-carousel { display: flex; transition: transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94); will-change: transform; }
+.asociado-slide { min-width: 100%; max-width: 100%; padding: 0 1rem; }
+.asociados-controls { display: flex; align-items: center; justify-content: center; gap: 1.2rem; margin-top: 2rem; }
+.asociados-btn { width: 40px; height: 40px; border: 1px solid var(--cream); background: var(--white); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: border-color 0.3s, background 0.3s; border-radius: 0; }
+.asociados-btn:hover { border-color: var(--gold); background: var(--gold); }
+.asociados-btn:hover svg { color: var(--white); }
+.asociados-btn svg { color: var(--black); transition: color 0.3s; }
+.asociados-dots { display: flex; gap: 0.5rem; }
+.asociados-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--cream); transition: background 0.3s; cursor: pointer; }
+.asociados-dot.active { background: var(--gold); }
 
 .formacion { padding: 7rem 0; background: var(--off-white); }
 .formacion .container { max-width: 900px; }
@@ -326,9 +340,6 @@ a, button, input, textarea, select { transition: all 0.2s cubic-bezier(0.4, 0, 0
   .footer-brand .footer-logo { align-items: center !important; }
   .footer-brand .footer-logo .sub { text-align: center; padding-right: 0; }
   .footer-brand p { text-align: center; margin: 0 auto; }
-  /* Asociados - 2 por fila en mobile */
-  .asociados-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 100%; padding: 0 1rem; }
-  .asociado-card { max-width: 100%; flex: none; }
 }
 
 @media (max-width: 768px) {
@@ -336,9 +347,9 @@ a, button, input, textarea, select { transition: all 0.2s cubic-bezier(0.4, 0, 0
   .hero-textlogo { font-size: 3.5rem; }
   .sobre-visual { height: 300px; }
   .sobre-content { padding: 4rem 1.5rem; }
-  .contacto-grid { text-align: center; }
-  .contacto-info { display: flex; flex-direction: column; align-items: center; }
-  .contacto-detail { width: 100%; justify-content: center; }
+  .contacto-grid { text-align: left; }
+  .contacto-info { display: flex; flex-direction: column; align-items: flex-start; }
+  .contacto-detail { width: 100%; justify-content: flex-start; }
   .prensa .container, .resenias .container { padding: 0 1rem; }
   .formacion-timeline::before { left: -3rem; }
   .formacion-item { margin-right: 3rem; }
@@ -348,6 +359,10 @@ a, button, input, textarea, select { transition: all 0.2s cubic-bezier(0.4, 0, 0
 
   /* Ocultar el logo del navbar en dispositivos móviles para evitar duplicación con el hero */
   .nav-logo { display: none !important; }
+
+  /* Asociados: Ocultar grid, mostrar carousel */
+  .asociados-desktop { display: none !important; }
+  .asociados-carousel-mobile { display: block; }
 }
 
 @media (max-width: 480px) {

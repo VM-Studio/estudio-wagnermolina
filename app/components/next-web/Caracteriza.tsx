@@ -1,6 +1,13 @@
+'use client';
+
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Caracteriza() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
   const directores = [
     {
       nombre: 'Dr. Rodolfo',
@@ -42,6 +49,30 @@ export default function Caracteriza() {
       imagen: '/ridacci.png',
     },
   ];
+
+  // Detectar si es mobile
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Autoplay para mobile
+  useEffect(() => {
+    if (!isMobile) return;
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % asociados.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [isMobile, asociados.length]);
+
+  const moveCarousel = (direction: number) => {
+    let newIndex = currentIndex + direction;
+    if (newIndex < 0) newIndex = asociados.length - 1;
+    if (newIndex >= asociados.length) newIndex = 0;
+    setCurrentIndex(newIndex);
+  };
 
   return (
     <section className="caracteriza">
@@ -88,7 +119,9 @@ export default function Caracteriza() {
         {/* Asociados */}
         <div style={{ marginTop: '4rem' }}>
           <h3 className="section-title" style={{ textAlign: 'center', marginBottom: '2.5rem' }}><em>Asociados</em></h3>
-          <div className="asociados-grid">
+          
+          {/* Desktop: Grid normal */}
+          <div className="asociados-grid asociados-desktop">
             {asociados.map((asociado, index) => (
               <div key={index} className="caracteriza-item asociado-card">
                 <div style={{ 
@@ -111,6 +144,58 @@ export default function Caracteriza() {
                 <p style={{ fontSize: '0.85rem', lineHeight: '1.5', textAlign: 'left' }}>{asociado.descripcion}</p>
               </div>
             ))}
+          </div>
+
+          {/* Mobile: Carousel */}
+          <div className="asociados-carousel-mobile">
+            <div className="asociados-carousel-wrap">
+              <div 
+                className="asociados-carousel"
+                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+              >
+                {asociados.map((asociado, index) => (
+                  <div key={index} className="asociado-slide">
+                    <div className="caracteriza-item asociado-card" style={{ maxWidth: '280px', margin: '0 auto' }}>
+                      <div style={{ 
+                        width: '150px', 
+                        height: '150px',
+                        overflow: 'hidden',
+                        marginBottom: '1rem'
+                      }}>
+                        <Image 
+                          src={asociado.imagen} 
+                          alt={`${asociado.nombre} ${asociado.apellido}`}
+                          width={150}
+                          height={150}
+                          style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                        />
+                      </div>
+                      <h3 style={{ marginBottom: '0.5rem' }}>
+                        {asociado.nombre} <strong>{asociado.apellido}</strong>
+                      </h3>
+                      <p style={{ fontSize: '0.85rem', lineHeight: '1.5', textAlign: 'center' }}>{asociado.descripcion}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="asociados-controls">
+              <button className="asociados-btn" onClick={() => moveCarousel(-1)}>
+                <ChevronLeft size={14} />
+              </button>
+              <div className="asociados-dots">
+                {asociados.map((_, index) => (
+                  <div 
+                    key={index} 
+                    className={`asociados-dot ${currentIndex === index ? 'active' : ''}`}
+                    onClick={() => setCurrentIndex(index)}
+                  />
+                ))}
+              </div>
+              <button className="asociados-btn" onClick={() => moveCarousel(1)}>
+                <ChevronRight size={14} />
+              </button>
+            </div>
           </div>
         </div>
       </div>

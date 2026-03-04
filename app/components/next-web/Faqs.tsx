@@ -13,11 +13,11 @@ export default function FAQs() {
     },
     {
       question: '¿Cómo puedo comunicarme con el estudio?',
-      answer: 'Puede escribirnos por WhatsApp al +54 9 3515 186325 o visitarnos en persona en Blvr. Chacabuco 187, 1b, Córdoba. También nos encontramos en Instagram como @abogado.fili.',
+      answer: 'Puede escribirnos por WhatsApp al (011) 4372-8257 o visitarnos en persona en Av. de Mayo 777, Piso 8, Buenos Aires. También puede enviarnos un email a contacto@estudiomolinawagner.com.',
     },
     {
       question: '¿Trabajan con casos de alta complejidad?',
-      answer: 'Absolutamente. El Dr. Augusto Filí tiene una trayectoria probada en litigios de alto perfil, estableciendo precedentes legales significativos. Además cuenta con una red de especialistas asociados que garantiza cobertura integral en cualquier rama del derecho.',
+      answer: 'Absolutamente. Molina Wagner & Asociados cuenta con más de dos décadas de trayectoria en litigios de alto perfil. Nuestro equipo de abogados especializados garantiza cobertura integral en Derecho Laboral, Civil, Previsional, Inmobiliario y Reclamos Salariales.',
     },
     {
       question: '¿Cuánto tiempo demora un proceso legal?',
