@@ -136,6 +136,11 @@ a, button, input, textarea, select { transition: all 0.2s cubic-bezier(0.4, 0, 0
 .caracteriza-item h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 500; margin-bottom: 0.8rem; color: var(--black); }
 .caracteriza-item p { font-size: 0.95rem; line-height: 1.8; color: var(--gray); font-weight: 400; }
 
+/* Directores - Mobile (oculto en desktop) */
+.directores-mobile { display: none; }
+.director-card-mobile { margin-bottom: 2.5rem; padding: 0 1rem; }
+.director-img-float { float: right; width: 130px; height: 130px; margin: 0 0 1rem 1rem; overflow: hidden; }
+
 /* Asociados Grid - Desktop */
 .asociados-grid { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; }
 .asociado-card { display: flex; flex-direction: column; align-items: center; flex: 1 1 220px; max-width: 260px; text-align: center; }
@@ -146,9 +151,8 @@ a, button, input, textarea, select { transition: all 0.2s cubic-bezier(0.4, 0, 0
 .asociados-carousel { display: flex; transition: transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94); will-change: transform; }
 .asociado-slide { min-width: 100%; max-width: 100%; padding: 0 1rem; }
 .asociados-controls { display: flex; align-items: center; justify-content: center; gap: 1.2rem; margin-top: 2rem; }
-.asociados-btn { width: 40px; height: 40px; border: 1px solid var(--cream); background: var(--white); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: border-color 0.3s, background 0.3s; border-radius: 0; }
-.asociados-btn:hover { border-color: var(--gold); background: var(--gold); }
-.asociados-btn:hover svg { color: var(--white); }
+.asociados-btn { width: 40px; height: 40px; border: none; background: transparent; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.asociados-btn:hover svg { color: var(--gold); }
 .asociados-btn svg { color: var(--black); transition: color 0.3s; }
 .asociados-dots { display: flex; gap: 0.5rem; }
 .asociados-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--cream); transition: background 0.3s; cursor: pointer; }
@@ -359,6 +363,10 @@ a, button, input, textarea, select { transition: all 0.2s cubic-bezier(0.4, 0, 0
 
   /* Ocultar el logo del navbar en dispositivos móviles para evitar duplicación con el hero */
   .nav-logo { display: none !important; }
+
+  /* Directores: Ocultar desktop, mostrar mobile con texto rodeando imagen */
+  .directores-desktop { display: none !important; }
+  .directores-mobile { display: block; }
 
   /* Asociados: Ocultar grid, mostrar carousel */
   .asociados-desktop { display: none !important; }

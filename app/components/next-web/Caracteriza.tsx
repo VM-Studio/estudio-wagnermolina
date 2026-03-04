@@ -82,8 +82,8 @@ export default function Caracteriza() {
           <h2 className="section-title">¿Quiénes nos <em>caracterizan?</em></h2>
         </div>
         
-        {/* Directores */}
-        <div style={{ display: 'flex', gap: '5rem', justifyContent: 'center', flexWrap: 'wrap', maxWidth: '1100px', margin: '0 auto' }}>
+        {/* Directores - Desktop */}
+        <div className="directores-desktop" style={{ display: 'flex', gap: '5rem', justifyContent: 'center', flexWrap: 'wrap', maxWidth: '1100px', margin: '0 auto' }}>
           {directores.map((director, index) => (
             <div key={index} className="caracteriza-item" style={{ 
               display: 'flex', 
@@ -112,6 +112,27 @@ export default function Caracteriza() {
                   style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                 />
               </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Directores - Mobile (texto rodea imagen) */}
+        <div className="directores-mobile">
+          {directores.map((director, index) => (
+            <div key={index} className="director-card-mobile">
+              <div className="director-img-float">
+                <Image 
+                  src={director.imagen} 
+                  alt={`${director.nombre} ${director.apellido}`}
+                  width={130}
+                  height={130}
+                  style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                />
+              </div>
+              <h3 style={{ marginBottom: '0.5rem', textAlign: 'left' }}>
+                {director.nombre} <strong>{director.apellido}</strong>
+              </h3>
+              <p style={{ fontSize: '0.9rem', lineHeight: '1.6', textAlign: 'left' }}>{director.descripcion}</p>
             </div>
           ))}
         </div>
@@ -155,7 +176,7 @@ export default function Caracteriza() {
               >
                 {asociados.map((asociado, index) => (
                   <div key={index} className="asociado-slide">
-                    <div className="caracteriza-item asociado-card" style={{ maxWidth: '280px', margin: '0 auto' }}>
+                    <div className="caracteriza-item asociado-card" style={{ maxWidth: '280px', margin: '0 auto', alignItems: 'flex-start', textAlign: 'left' }}>
                       <div style={{ 
                         width: '150px', 
                         height: '150px',
@@ -170,10 +191,10 @@ export default function Caracteriza() {
                           style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                         />
                       </div>
-                      <h3 style={{ marginBottom: '0.5rem' }}>
+                      <h3 style={{ marginBottom: '0.5rem', textAlign: 'left' }}>
                         {asociado.nombre} <strong>{asociado.apellido}</strong>
                       </h3>
-                      <p style={{ fontSize: '0.85rem', lineHeight: '1.5', textAlign: 'center' }}>{asociado.descripcion}</p>
+                      <p style={{ fontSize: '0.85rem', lineHeight: '1.5', textAlign: 'left' }}>{asociado.descripcion}</p>
                     </div>
                   </div>
                 ))}
