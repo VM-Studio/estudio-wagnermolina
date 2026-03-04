@@ -1,33 +1,59 @@
-import { Users, Scale, Briefcase } from 'lucide-react';
+import { Users, Scale, Briefcase, Home, BadgeDollarSign } from 'lucide-react';
 
 export default function Especialidades() {
   const especialidades = [
     {
-      icon: Users,
-      title: 'Derecho Sucesorio y Familia',
-      description: 'Elaboramos estrategias sensibles y efectivas para asuntos personales y patrimoniales que requieren un manejo legal cuidadoso.',
+      icon: Briefcase,
+      title: 'Derecho Laboral',
+      description: 'Representación legal integral para trabajadores y empleadores en todas las instancias.',
       items: [
-        { bold: 'Sucesiones y Herencias:', text: 'Gestión integral de Declaratoria de Herederos, Tracto Abreviado y manejo de conflictos para una distribución eficiente.' },
-        { bold: 'Divorcios y Acuerdos:', text: 'Asesoría en procesos de divorcio, redacción y negociación de Acuerdos Prenupciales.' },
+        { bold: 'Parte Actora:', text: 'Defensa de los derechos del trabajador.' },
+        { bold: 'Parte Demandada:', text: 'Asesoramiento a empresas y empleadores.' },
+        { bold: 'Jurisdicción:', text: 'Caba y Prov. Bs. As.' },
       ],
     },
     {
       icon: Scale,
-      title: 'Indemnizaciones y Daños',
-      description: 'Defendemos sus derechos para obtener la compensación justa que le corresponde por los perjuicios sufridos.',
+      title: 'Derecho Civil',
+      description: 'Soluciones legales efectivas para conflictos civiles y patrimoniales.',
       items: [
-        { bold: 'Accidentes de Tránsito:', text: 'Reclamos y litigios por daños y lesiones derivados de siniestros viales.' },
-        { bold: 'Mala Praxis Médica:', text: 'Representación legal en casos de negligencia profesional en el ámbito de la salud.' },
+        { bold: 'Accidentes de tránsito:', text: 'Reclamos por daños y perjuicios.' },
+        { bold: 'Contratos:', text: 'Redacción, revisión y ejecución.' },
+        { bold: 'Sucesiones:', text: 'Gestión integral de herencias.' },
+        { bold: 'Ejec. Alquileres:', text: 'Cobro de deudas por alquileres.' },
+        { bold: 'Desalojos:', text: 'Procedimientos de desalojo.' },
       ],
     },
     {
-      icon: Briefcase,
-      title: 'Derecho Laboral',
-      description: 'Protegemos los derechos de trabajadores y empleadores con un enfoque equilibrado y resolución efectiva.',
+      icon: Users,
+      title: 'Derecho Previsional',
+      description: 'Asesoramiento especializado en jubilaciones y pensiones.',
       items: [
-        { bold: 'Despidos y Reclamos:', text: 'Asesoramiento y representación en despidos con y sin justa causa.' },
-        { bold: 'Irregularidades:', text: 'Casos de empleo sin registrar (trabajo "en negro").' },
-        { bold: 'Contratación:', text: 'Redacción y revisión de contratos individuales.' },
+        { bold: 'Jubilaciones:', text: 'Trámites y reclamos jubilatorios.' },
+        { bold: 'Pensión por fallecimiento:', text: 'Gestión de pensiones derivadas.' },
+        { bold: 'Retiro por Invalidez:', text: 'Asesoramiento en retiros por incapacidad.' },
+      ],
+    },
+    {
+      icon: Home,
+      title: 'Asesoramiento Inmobiliario',
+      description: 'Servicios legales completos para operaciones inmobiliarias.',
+      items: [
+        { bold: 'Compra - Venta:', text: 'Operaciones de compraventa de inmuebles.' },
+        { bold: 'Alquileres:', text: 'Contratos de locación.' },
+        { bold: 'Propiedades y Locales:', text: 'Asesoramiento integral.' },
+        { bold: 'Terrenos - Cocheras:', text: 'Operaciones especializadas.' },
+        { bold: 'Tasaciones:', text: 'Valuación de propiedades.' },
+        { bold: 'Consorcios:', text: 'Asesoramiento para consorcios.' },
+      ],
+    },
+    {
+      icon: BadgeDollarSign,
+      title: 'Reclamos Salariales',
+      description: 'Defensa de derechos salariales para personal de fuerzas de seguridad.',
+      items: [
+        { bold: 'Diferencias salariales:', text: 'Reclamos por diferencia salarial de personal activo, retirado y pensionado.' },
+        { bold: 'Fuerzas:', text: 'FFAA - GN - PNA - SPF.' },
       ],
     },
   ];

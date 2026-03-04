@@ -7,34 +7,33 @@ export default function Sobre() {
         <div className="sobre-visual-img"></div>
         <div className="sobre-visual-accent"></div>
         <div className="sobre-visual-stat">
-          <div className="num">20+</div>
-          <div className="label">Años de trayectoria</div>
+          <div className="num">10.000+</div>
+          <div className="label">Clientes representados</div>
         </div>
       </div>
       <div className="sobre-content">
         <div className="section-label">Sobre Nosotros</div>
         <h2 className="section-title">
-          Experiencia en alta complejidad<br />y <em>gran litigación</em>
+          Molina Wagner<br /><em>& Asociados</em>
         </h2>
         <p className="sobre-intro">
-          Ofrecemos un servicio legal integral que combina la experiencia en alta complejidad 
-          y la gran litigación con un compromiso inquebrantable y atención personalizada para cada cliente.
+          Formado por un equipo de abogados altamente calificado, el estudio jurídico Molina Wagner & Asociados 
+          brinda una atención integral, abarcadora de las áreas específicas de la vida personal y empresarial de sus clientes.
         </p>
         <div className="sobre-text">
           <p>
-            Con más de 20 años de trayectoria y solvencia profesional, el Dr. Augusto Filí ha 
-            consolidado un modelo de atención jurídica basado en la excelencia y la especialización estratégica.
+            Con más de dos décadas de trayectoria y más de 10.000 personas representadas, respaldamos 
+            la eficacia y honestidad de nuestros servicios, cuya central prioridad es la satisfacción del cliente.
           </p>
           <p>
-            Entendiendo que el derecho actual exige abordajes integrales, el Dr. Filí se encuentra 
-            asociado desde hace más de dos décadas con profesionales especialistas en diversas ramas jurídicas. 
-            Esta red de colaboración técnica permite brindar un servicio de máxima precisión en cada área, 
-            garantizando respuestas sólidas y personalizadas para cada caso.
+            Nuestro compromiso se fundamenta en valores sólidos que guían cada aspecto de nuestra práctica profesional: 
+            <strong> experiencia y honestidad</strong> como pilares de confianza, <strong>tradición y vanguardia</strong> para 
+            combinar el conocimiento consolidado con las herramientas más actuales del derecho.
           </p>
           <p>
-            A lo largo de su carrera ha mantenido un profundo compromiso con la formación continua, 
-            capacitándose en instituciones de primer nivel a través de diversas diplomaturas que 
-            fortalecen una práctica profesional de vanguardia y alto desempeño.
+            Garantizamos <strong>confidencialidad y profesionalidad</strong> en cada caso que tomamos, 
+            porque entendemos que detrás de cada expediente hay una historia personal que merece el máximo respeto. 
+            Nuestra meta es simple: su <strong>atención y satisfacción</strong> completa.
           </p>
         </div>
       </div>

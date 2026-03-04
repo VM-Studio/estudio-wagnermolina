@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Montserrat, Roboto_Slab } from "next/font/google";
 import "./globals.css";
 import WhatsAppButton from "./components/WhatsAppButton";
-import GoogleAdsTracking from "./components/GoogleAdsTracking";
 import { Cormorant_Garamond, Raleway } from 'next/font/google';
 
 const cormorant = Cormorant_Garamond({
@@ -53,10 +52,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${cormorant.variable} ${raleway.variable} scroll-smooth`}>
-      <head>
-        {/* Google Ads Tracking */}
-        <GoogleAdsTracking />
-      </head>
       <body
         className={`${montserrat.variable} ${robotoSlab.variable} antialiased font-sans text-gray-900 bg-white`}
       >

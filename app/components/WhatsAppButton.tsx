@@ -1,24 +1,15 @@
 'use client';
 
-import { trackWhatsAppConversion } from './GoogleAdsTracking';
-
 interface WhatsAppButtonProps {
   message?: string;
 }
 
 export default function WhatsAppButton({ message = "Hola,%20quiero%20consultar%20sobre%20sucesiones" }: WhatsAppButtonProps) {
-  
-  const handleClick = () => {
-    // Disparar evento de conversión de Google Ads
-    trackWhatsAppConversion();
-  };
-
   return (
     <a
       href={`https://wa.me/5493515186325?text=${message}`}
       target="_blank"
       rel="noopener noreferrer"
-      onClick={handleClick}
       className="whatsapp-btn group"
       aria-label="Contactar por WhatsApp"
     >

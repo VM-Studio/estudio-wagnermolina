@@ -7,12 +7,7 @@ import Hero from './components/next-web/Her';
 import Especialidades from './components/next-web/Especialidades';
 import Sobre from './components/next-web/Sobre';
 import Caracteriza from './components/next-web/Caracteriza';
-import Formacion from './components/next-web/Formacion';
 import Prensa from './components/next-web/Prensa';
-import CNNVideo from './components/next-web/CNNVideo';
-import Videos from './components/next-web/Videos';
-import Resenias from './components/next-web/Reseñas';
-import Instagram from './components/next-web/Instagram';
 import FAQs from './components/next-web/Faqs';
 import Contacto from './components/next-web/Contacto';
 import Ubicacion from './components/next-web/Ubicacion';
@@ -77,15 +72,10 @@ export default function FiliyAsociadosPage() {
       <Navbar />
       <main>
   <Hero />
-  <CNNVideo />
   <Especialidades />
         <Sobre />
         <Caracteriza />
-        <Formacion />
         <Prensa />
-        <Videos />
-        <Resenias />
-        <Instagram />
         <FAQs />
         <Ubicacion />
         <Contacto />

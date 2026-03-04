@@ -30,29 +30,31 @@ export default function FAQs() {
   };
 
   return (
-    <section className="faqs" id="faqs">
+    <section className="faqs" id="faqs" style={{ backgroundColor: '#141414' }}>
       <div className="container">
         <div className="faqs-header">
-          <div className="section-label">Preguntas Frecuentes</div>
-          <h2 className="section-title">Resolvemos sus <em>dudas</em></h2>
+          <div className="section-label" style={{ color: 'rgba(255,255,255,0.7)' }}>Preguntas Frecuentes</div>
+          <h2 className="section-title" style={{ color: '#fff' }}>Resolvemos sus <em>dudas</em></h2>
         </div>
         <div className="faqs-list">
           {faqs.map((faq, index) => (
             <div 
               key={index} 
               className={`faq-item ${openIndex === index ? 'open' : ''}`}
+              style={{ borderColor: 'rgba(255,255,255,0.15)' }}
             >
               <button 
                 className="faq-question" 
                 onClick={() => toggleFaq(index)}
+                style={{ color: '#fff' }}
               >
-                <h4>{faq.question}</h4>
-                <div className="faq-icon">
+                <h4 style={{ color: '#fff' }}>{faq.question}</h4>
+                <div className="faq-icon" style={{ color: '#fff', borderColor: 'rgba(255,255,255,0.3)' }}>
                   <Plus size={14} />
                 </div>
               </button>
               <div className="faq-answer">
-                <p>{faq.answer}</p>
+                <p style={{ color: 'rgba(255,255,255,0.8)' }}>{faq.answer}</p>
               </div>
             </div>
           ))}

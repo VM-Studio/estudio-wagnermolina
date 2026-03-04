@@ -1,20 +1,12 @@
 'use client';
 
-import { trackWhatsAppConversion } from "../GoogleAdsTracking";
-
-
 export default function WhatsAppButton() {
-  const handleClick = () => {
-    trackWhatsAppConversion();
-  };
-
   return (
     <a 
       href="https://wa.me/5493515186325" 
       target="_blank" 
       rel="noopener noreferrer"
       className="whatsapp-btn"
-      onClick={handleClick}
       aria-label="Contactar por WhatsApp"
     >
       <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
